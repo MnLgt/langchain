@@ -1,0 +1,3 @@
+./lang/*
+.pyc
+lang/bin/humanfriendly
