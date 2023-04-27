@@ -15,7 +15,7 @@ st.write(
 
 
 # App framework
-st.title('💪 DOM Geatle 🤴  Chat Daddy 🔥')
+st.title('💪 DOM Gheadle 🤴  Chat Daddy 🔥')
 prompt = st.text_input('Plug in your prompt here') 
 
 # img = Image.open("images/dom_geatle.png")
