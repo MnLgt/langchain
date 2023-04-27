@@ -4,3 +4,8 @@ __pycache__
 .chroma/index/index_084e589a-4da2-4fdc-b97f-f02c91e02608.bin
 .vscode/*
 .ipynb_checkpoints/Untitled-checkpoint.ipynb
+/lang/*
+apikey.py
+datasets/*
+.DS_Store
+chroma*

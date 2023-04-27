@@ -1,2 +1,1 @@
-apikey = 'UR-API-KEY'
-your = 'hi'
+apikey = 'YOUR_KEY'
