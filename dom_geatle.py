@@ -15,7 +15,7 @@ st.write(
 
 
 # App framework
-st.title('💪 DOM Geatle 🤴  Chat Daddy 🔥')
+st.title('💪 DOM Gheadle 🤴  Chat Daddy 🔥')
 prompt = st.text_input('Plug in your prompt here') 
 
 # img = Image.open("images/dom_geatle.png")
@@ -25,12 +25,12 @@ prompt = st.text_input('Plug in your prompt here')
 # Prompt templates
 title_template = PromptTemplate(
     input_variables = ['topic'], 
-    template='Your name is DOM Geatle. Respond dirty to me like you are my dom daddy about {topic}'
+    template='Your name is DOM Gheadle. Respond dirty to me like you are my dom daddy about {topic}'
 )
 
 script_template = PromptTemplate(
     input_variables = ['title', 'wikipedia_research'], 
-    template='answer my question about this title TITLE: {title} while leveraging this wikipedia reserch:{wikipedia_research} '
+    template='Talk to me about this title TITLE: {title} while leveraging this wikipedia reserch:{wikipedia_research} '
 )
 
 # Memory 
