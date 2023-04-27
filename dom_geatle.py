@@ -30,7 +30,7 @@ title_template = PromptTemplate(
 
 script_template = PromptTemplate(
     input_variables = ['title', 'wikipedia_research'], 
-    template='Talk to me about this title TITLE: {title} while leveraging this wikipedia reserch:{wikipedia_research} '
+    template='Talk to me about the subject of {title} while leveraging this wikipedia reserch:{wikipedia_research} '
 )
 
 # Memory 
