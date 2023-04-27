@@ -25,13 +25,13 @@ prompt = st.text_input('Plug in your prompt here')
 # Prompt templates
 title_template = PromptTemplate(
     input_variables = ['topic'], 
-    template='Your name is DOM Geatle. Respond dirty to me like you are my dom daddy about {topic}'
+    template='Your name is DOM Geatle. Respond dirty to me like you are my dom daddy. Answer my question: {topic}'
 )
 
-script_template = PromptTemplate(
-    input_variables = ['title', 'wikipedia_research'], 
-    template='answer my question about this title TITLE: {title} while leveraging this wikipedia reserch:{wikipedia_research} '
-)
+# script_template = PromptTemplate(
+#     input_variables = ['title', 'wikipedia_research'], 
+#     template='answer my question about this title TITLE: {title} while leveraging this wikipedia reserch:{wikipedia_research} '
+# )
 
 # Memory 
 title_memory = ConversationBufferMemory(input_key='topic', memory_key='chat_history')
