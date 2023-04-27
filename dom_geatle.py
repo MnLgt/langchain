@@ -54,8 +54,8 @@ if prompt:
     st.write(title) 
     st.write(script) 
 
-    with st.expander('Title History'): 
-        st.info(title_memory.buffer)
+#     with st.expander('Title History'): 
+#         st.info(title_memory.buffer)
 
     with st.expander('Script History'): 
         st.info(script_memory.buffer)
