@@ -8,12 +8,23 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain 
 from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper 
+from PIL import Image 
 
-os.environ['OPENAI_API_KEY'] = apikey
+img = Image.open("images/dom_geatle.png")
+st.image(img, caption="Caption for your image", use_column_width=True)
+
+st.write(
+    "Has environment variables been set:",
+    os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"],
+)
 
 # App framework
 st.title('💪 DOM Geatle 🤴  Chat Daddy 🔥')
 prompt = st.text_input('Plug in your prompt here') 
+
+# img = Image.open("images/dom_geatle.png")
+# st.image(img)
+
 
 # Prompt templates
 title_template = PromptTemplate(
