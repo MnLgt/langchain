@@ -9,3 +9,4 @@ apikey.py
 datasets/*
 .DS_Store
 chroma*
+.streamlit/secrets.toml
