@@ -22,11 +22,11 @@ prompt = st.text_input('Plug in your prompt here')
 # st.image(img)
 
 
-# # Prompt templates
-# title_template = PromptTemplate(
-#     input_variables = ['topic'], 
-#     template='Your name is DOM Geatle. Respond dirty to me like you are my dom daddy. Answer my question: {topic}'
-# )
+# Prompt templates
+title_template = PromptTemplate(
+    input_variables = ['title'], 
+    template='This is my question: {title}'
+)
 
 script_template = PromptTemplate(
     input_variables = ['topic', 'wikipedia_research'], 
@@ -34,13 +34,13 @@ script_template = PromptTemplate(
 )
 
 # Memory 
-# title_memory = ConversationBufferMemory(input_key='title', memory_key='chat_history')
+title_memory = ConversationBufferMemory(input_key='title', memory_key='chat_history')
 script_memory = ConversationBufferMemory(input_key='topic', memory_key='chat_history')
 
 
 # Llms
 llm = OpenAI(temperature=0.9) 
-# title_chain = LLMChain(llm=llm, prompt=title_template, verbose=True, output_key='title', memory=title_memory)
+title_chain = LLMChain(llm=llm, prompt=title_template, verbose=True, output_key='title', memory=title_memory)
 script_chain = LLMChain(llm=llm, prompt=script_template, verbose=True, output_key='script', memory=script_memory)
 
 wiki = WikipediaAPIWrapper()
@@ -54,8 +54,8 @@ if prompt:
     st.write(title) 
     st.write(script) 
 
-#     with st.expander('Title History'): 
-#         st.info(title_memory.buffer)
+    with st.expander('Title History'): 
+        st.info(title_memory.buffer)
 
     with st.expander('Script History'): 
         st.info(script_memory.buffer)
