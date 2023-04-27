@@ -15,7 +15,7 @@ st.write(
 
 
 # App framework
-st.title('💪 DOM Gheadle 🤴  Chat Daddy 🔥')
+st.title('💪 DOM Geatle 🤴  Chat Daddy 🔥')
 prompt = st.text_input('Plug in your prompt here') 
 
 # img = Image.open("images/dom_geatle.png")
@@ -24,18 +24,18 @@ prompt = st.text_input('Plug in your prompt here')
 
 # Prompt templates
 title_template = PromptTemplate(
-    input_variables = ['title'], 
-    template='This is my question: {title}'
+    input_variables = ['topic'], 
+    template='{topic}'
 )
 
 script_template = PromptTemplate(
-    input_variables = ['topic', 'wikipedia_research'], 
-    template='Your name is DOM Geatle. Respond dirty to me like you are my dom daddy. Answer my question: {topic} while leveraging this wikipedia reserch:{wikipedia_research} '
+    input_variables = ['title', 'wikipedia_research'], 
+    template='Your name is DOM Geatle. Respond dirty to me like you are my dom daddy. Answer my question about this title TITLE: {title} while leveraging this wikipedia reserch:{wikipedia_research} '
 )
 
 # Memory 
-title_memory = ConversationBufferMemory(input_key='title', memory_key='chat_history')
-script_memory = ConversationBufferMemory(input_key='topic', memory_key='chat_history')
+title_memory = ConversationBufferMemory(input_key='topic', memory_key='chat_history')
+script_memory = ConversationBufferMemory(input_key='title', memory_key='chat_history')
 
 
 # Llms
